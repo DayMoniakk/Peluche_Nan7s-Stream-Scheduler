@@ -73,7 +73,7 @@
     />
 </div>
 
-<span class="credit-container">Developed for <a href="https://www.twitch.tv/peluche_nan7s" target="_blank">peluche_nan7s</a> by <a href="https://github.com/DayMoniakk" target="_blank">DayMoniakk</a></span>
+<span class="credit-container">Developed for <a href="https://www.twitch.tv/nan7s_peluche" target="_blank">nan7s_peluche</a> by <a href="https://github.com/DayMoniakk" target="_blank">DayMoniakk</a></span>
 
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;700&display=swap");

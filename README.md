@@ -1,6 +1,6 @@
 # Stream Scheduler
 
-A tool that I created for the twitch streamer [Peluche](https://www.twitch.tv/peluche_nan7s).
+A tool that I created for the twitch streamer [nan7s_peluche](https://www.twitch.tv/nan7s_peluche).
 
 It aims to quickly create stream schedules that can be paste on a Discord channel.
 
