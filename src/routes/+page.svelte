@@ -1,26 +1,20 @@
 <script>
     import { formatDate } from "../utilities";
-    import { ScheduleData } from "../scheduleData"
+    import { ScheduleData } from "../scheduleData";
 
     import Week from "../components/week.svelte";
     import Day from "../components/day.svelte";
     import ApplyButton from "../components/applyButton.svelte";
     import ClipboardNotification from "../components/clipboardNotification.svelte";
+    import OfflineText from "../components/offlineText.svelte";
 
     let daysString = [];
     let daysRef = new Array(7);
     let fullDays = [];
     let clipboardNotification;
+    let offlineMessage = "Offline";
 
-    let scheduleData = [
-        new ScheduleData(),
-        new ScheduleData(),
-        new ScheduleData(),
-        new ScheduleData(),
-        new ScheduleData(),
-        new ScheduleData(),
-        new ScheduleData()
-    ];
+    let scheduleData = [new ScheduleData(), new ScheduleData(), new ScheduleData(), new ScheduleData(), new ScheduleData(), new ScheduleData(), new ScheduleData()];
 
     function handleWeekChange(event) {
         fullDays = event.detail.value;
@@ -30,7 +24,7 @@
         }
     }
 
-    function handleDayChange(event, index){
+    function handleDayChange(event, index) {
         scheduleData[index].setIsdayOff(event.detail.isDayOff);
         scheduleData[index].setHasSecondStream(event.detail.hasSecondStream);
 
@@ -39,6 +33,10 @@
 
         scheduleData[index].setSecondTime(event.detail.secondTime);
         scheduleData[index].setSecondContent(event.detail.secondContent);
+    }
+
+    function handleOfflineMessage(event) {
+        offlineMessage = event.detail.value;
     }
 
     function handleClipboardNotification() {
@@ -66,11 +64,9 @@
         />
     {/each}
 
-    <ApplyButton 
-        bind:weekDays={fullDays} 
-        bind:scheduleData={scheduleData}
-        on:savedToClipboard={handleClipboardNotification} 
-    />
+    <OfflineText on:change={handleOfflineMessage} />
+
+    <ApplyButton bind:weekDays={fullDays} bind:scheduleData on:savedToClipboard={handleClipboardNotification} bind:offlineMessage={offlineMessage} />
 </div>
 
 <span class="credit-container">Developed for <a href="https://www.twitch.tv/nan7s_peluche" target="_blank">nan7s_peluche</a> by <a href="https://github.com/DayMoniakk" target="_blank">DayMoniakk</a></span>

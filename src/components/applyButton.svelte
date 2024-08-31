@@ -6,6 +6,7 @@
 
     export let weekDays;
     export let scheduleData;
+    export let offlineMessage;
 
     function getDate(date, time) {
         let target = date;
@@ -29,7 +30,7 @@
             const hasSecondStream = scheduleData[i].getHasSecondStream();
 
             if (isDayOff) {
-                result += `${formatDate(weekDays[i])} - Offline\n\n`;
+                result += `${formatDate(weekDays[i])} - ${offlineMessage}\n\n`;
                 continue;
             }
 

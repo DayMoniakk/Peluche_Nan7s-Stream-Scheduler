@@ -16,6 +16,11 @@ Built using the front-end framework [Svelte](https://svelte.dev/).
 By default the project is setup to be deployed to [Netlify](https://www.netlify.com/).
 
 
+## Known Issues
+
+Looks terrible on smaller screens like smartphones but I can't be bothered right now.
+
+
 ## Run Locally
 Install dependencies
 

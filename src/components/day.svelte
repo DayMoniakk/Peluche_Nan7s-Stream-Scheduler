@@ -140,7 +140,7 @@
     }
 
     .day-text {
-        max-width: 100px;
+        max-width: 120px;
         padding-right: 10px;
         font-weight: 400;
         text-align: center;
