@@ -36,7 +36,7 @@
 
 <style>
     .week-container {
-        background-color: white;
+        background-color: #dbdbdb;
         width: 300px;
         height: 50px;
         border-radius: 5px;

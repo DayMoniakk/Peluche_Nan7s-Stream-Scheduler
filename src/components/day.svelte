@@ -144,6 +144,7 @@
         padding-right: 10px;
         font-weight: 400;
         text-align: center;
+        font-size: 18.5px;
     }
 
     .stream-time {
